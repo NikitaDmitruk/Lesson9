@@ -3,8 +3,8 @@ package TaskTwo;
 public class Circle extends Figure {
     private String name = "Круг";
     private double radius;
+    private double perimeterSize;
     private double areaSize;
-    private double squareSize;
 
     public Circle(double radius) {
         this.radius = radius;
@@ -21,19 +21,19 @@ public class Circle extends Figure {
 
     @Override
     public double getAreaSize() {
-        return areaSize;
+        return perimeterSize;
     }
 
     @Override
     public double getSquareSize() {
-        return squareSize;
+        return areaSize;
     }
 
     public void area() {
-        areaSize = 2 * radius * Math.PI;
+        perimeterSize = 2 * radius * Math.PI;
     }
 
     public void square() {
-        squareSize = Math.pow(radius, 2)*Math.PI;
+        areaSize = Math.pow(radius, 2) * Math.PI;
     }
 }

@@ -2,19 +2,19 @@ package TaskTwo;
 
 public abstract class Figure {
     private String name;
+    private double perimeterSize;
     private double areaSize;
-    private double squareSize;
 
     public String getName() {
         return name;
     }
 
     public double getAreaSize() {
-        return areaSize;
+        return perimeterSize;
     }
 
     public double getSquareSize() {
-        return squareSize;
+        return areaSize;
     }
 
     public abstract void area();

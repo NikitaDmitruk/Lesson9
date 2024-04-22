@@ -5,8 +5,8 @@ public class Triangle extends Figure {
     private double sideOneSize;
     private double sideTwoSize;
     private double sideThreeSize;
+    private double perimeterSize;
     private double areaSize;
-    private double squareSize;
 
     public Triangle(double sideOneSize, double sideTwoSize, double sideThreeSize) {
         this.sideOneSize = sideOneSize;
@@ -29,12 +29,12 @@ public class Triangle extends Figure {
 
     @Override
     public double getAreaSize() {
-        return areaSize;
+        return perimeterSize;
     }
 
     @Override
     public double getSquareSize() {
-        return squareSize;
+        return areaSize;
     }
 
     public double getSideThreeSize() {
@@ -43,11 +43,11 @@ public class Triangle extends Figure {
 
     @Override
     public void area() {
-        areaSize = sideOneSize + sideTwoSize + sideThreeSize;
+        perimeterSize = sideOneSize + sideTwoSize + sideThreeSize;
     }
 
     @Override
     public void square() {
-        squareSize = Math.sqrt((areaSize / 2) * ((areaSize / 2) - sideOneSize) * ((areaSize / 2) - sideTwoSize) * ((areaSize / 2) - sideThreeSize));
+        areaSize = Math.sqrt((perimeterSize / 2) * ((perimeterSize / 2) - sideOneSize) * ((perimeterSize / 2) - sideTwoSize) * ((perimeterSize / 2) - sideThreeSize));
     }
 }

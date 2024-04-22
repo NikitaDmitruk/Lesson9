@@ -4,8 +4,8 @@ public class Rectangle extends Figure {
     private String name = "Прямоугольник";
     private double sideOneSize;
     private double sideTwoSize;
+    private double perimeterSize;
     private double areaSize;
-    private double squareSize;
 
     public Rectangle(double sideOneSize, double sideTwoSize) {
         this.sideOneSize = sideOneSize;
@@ -27,21 +27,21 @@ public class Rectangle extends Figure {
 
     @Override
     public double getAreaSize() {
-        return areaSize;
+        return perimeterSize;
     }
 
     @Override
     public double getSquareSize() {
-        return squareSize;
+        return areaSize;
     }
 
     @Override
     public void area() {
-        areaSize = sideOneSize * 2 + sideTwoSize * 2;
+        perimeterSize = sideOneSize * 2 + sideTwoSize * 2;
     }
 
     @Override
     public void square() {
-        squareSize = sideOneSize * sideTwoSize;
+        areaSize = sideOneSize * sideTwoSize;
     }
 }
